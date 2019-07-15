@@ -1,15 +1,15 @@
-“The Guessing Game”
+OOP SAMPLE - “The Guessing Game”
 
-This console program was written to show that the programmer has the ability to program in c# using OOP principles. Please note, some of the programming choices may have been a bit “forced” in order to demonstrate knowledge of OOP.  
+This console program was written to show that I have the ability to program in c# using OOP concepts and principles. Please note, some of the programming choices may have been a bit “forced” in order to demonstrate knowledge of OOP.  This program is a work  in progress that I’m constantly refactoring to find better ways to do things. My next steps will be to add generics, proper validation using try-catch, and get and set accessors for increased data integrity when being passed between classes.
 
-The Guessing game allows the user (Batman) to play the computer (The Penguin) in multiple “best out of five” guessing games. The first to guess correctly three times win the series. The user can then choose to play another “best out of five” series, or quit.
+The game allows the user (Batman) to play the computer (The Penguin) in multiple “best out of five” guessing games. The first to guess correctly three times win the series. The user can then choose to play another “best out of five” series, or quit.
 
-Program notes:
+CONCEPTS USED:
 
-The settings class allows for one stop changes to  the game. The names of Batman and The Penguin are coded as CONST variables in the Games settings class.  The names can be changed without creating oddities in the game narration. The number of games needed to win a series can also be changed with no changes required elsewhere.
-
-At the end of the game the user is given their scoring totals, a possible award and some end of game advice. All scoring information is encapsulated in the Record Book class.  Only that class makes changes to the score data when another class calls its methods and provides scoring updates.The end of game tips come from the ProTips Class, which is a derived class that inherits properties from the base class called Basic Tips.  The base class also contains a virtual class that is overridden in the Pro Tips class, simply as a display of polymorphism.
-
-All program validation is handled by one class. This is done by placing the Console.Read statement in a while loop and passing the user's entry, plus all valid entry choices to the Validation Class. Arguments must be sent in the form of strings.  The validation class compares all elements as lower case (it assumes there will never be changes made to this game that would require the user to enter capital letters only.)  The validation class uses method overloading in case the game ever requires a third possible valid choice to be passed. 
-
-
+MULTITHREADING The “GoodBye” class (page 12) uses multithreading to run the process of gathering tips for the end user while simultaneously checking to see if the end user won an award for good performance. 
+RE-USE  A completely different game could be made with just a few changes. The names of Batman and The Penguin are coded as CONST variables in the Games settings class (page 14).  The names can be changed without creating oddities in the game narration. The number of games needed to win a series can also be changed with no changes required elsewhere.  All program validation is also handled by the Validation class (page 13) This is done by placing the Console.Read statement in a while loop and passing the user's entry, plus all valid entry choices to the Validation Class. Arguments must be sent in the form of strings.  The validation class compares all elements as lower case (it assumes there will never be changes made to this game that would require the user to enter capital letters only.) 
+ENCAPSULATION At the end of the game the user is given their scoring totals, a possible award and some end of game advice. All scoring information is encapsulated in the Record Book class (page 8,9).  Only that class makes changes to the score data when another class calls its methods and provides scoring updates.
+INHERITANCE .The end of game tips come from the ProTips Class (page 11), which is a derived class that inherits properties from the base class called Basic Tips (page 10).
+ABSTRACTION The program is divided into ten classes that each handle a portion of the game and only share information that each needs to handle their task at hand.  
+OVERLOADED METHOD  The validation class (page 13) uses method overloading in case the game ever requires a third possible valid choice to be passed. 
+POLYMORPHISM/METHOD OVERRIDE  The base class called Basic Tips (page 10) contains a virtual method that is overridden in the Pro Tips class (page 11) as a display of polymorphism.
